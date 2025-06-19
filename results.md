@@ -1,0 +1,87 @@
+```shell
+npm run bench
+
+> napi-bench@0.0.1 bench
+> node test-napi.js && node test-napi-rs.js && node test-ffast.js
+
+node_v23.11.1    sum_napi             time      784 rate     25502891 rate/core     25373762 ns/iter        39.21 rss     56336384 usr 100.51 sys   0.00 tot 100.51
+node_v23.11.1    sum_napi             time      764 rate     26148144 rate/core     26012309 ns/iter        38.24 rss     56991744 usr 100.52 sys   0.00 tot 100.52
+node_v23.11.1    sum_napi             time      731 rate     27344238 rate/core     27419153 ns/iter        36.57 rss     57122816 usr  99.73 sys   0.00 tot  99.73
+node_v23.11.1    sum_napi             time      767 rate     26072771 rate/core     26005050 ns/iter        38.35 rss     57122816 usr 100.26 sys   0.00 tot 100.26
+node_v23.11.1    sum_napi             time      731 rate     27342848 rate/core     27380304 ns/iter        36.57 rss     57122816 usr  99.86 sys   0.00 tot  99.86
+node_v23.11.1    sum_napi             time      730 rate     27364952 rate/core     27439924 ns/iter        36.54 rss     57122816 usr  99.73 sys   0.00 tot  99.73
+node_v23.11.1    sum_napi             time      764 rate     26154328 rate/core     26326396 ns/iter        38.23 rss     57122816 usr  99.35 sys   0.00 tot  99.35
+node_v23.11.1    sum_napi             time      733 rate     27250896 rate/core     27029943 ns/iter        36.69 rss     57253888 usr 100.82 sys   0.00 tot 100.82
+node_v23.11.1    sum_napi             time      741 rate     26970694 rate/core     27043588 ns/iter        37.07 rss     57253888 usr  99.73 sys   0.00 tot  99.73
+node_v23.11.1    sum_napi             time      764 rate     26155057 rate/core     25985219 ns/iter        38.23 rss     57384960 usr 100.65 sys   0.00 tot 100.65
+node_v23.11.1    sum_napi             time      731 rate     27356866 rate/core     27431817 ns/iter        36.55 rss     57384960 usr  99.73 sys   0.00 tot  99.73
+node_v23.11.1    sum_napi             time      730 rate     27396440 rate/core     27396440 ns/iter        36.50 rss     57384960 usr 100.00 sys   0.00 tot 100.00
+node_v23.11.1    sum_napi             time      768 rate     26022523 rate/core     25988727 ns/iter        38.42 rss     57384960 usr 100.13 sys   0.00 tot 100.13
+node_v23.11.1    sum_napi             time      732 rate     27309632 rate/core     27384453 ns/iter        36.61 rss     57516032 usr  99.73 sys   0.00 tot  99.73
+node_v23.11.1    sum_napi             time      749 rate     26693580 rate/core     26693580 ns/iter        37.46 rss     57516032 usr 100.00 sys   0.00 tot 100.00
+node_v23.11.1    sum_napi             time      766 rate     26077525 rate/core     25975924 ns/iter        38.34 rss     57516032 usr 100.39 sys   0.00 tot 100.39
+node_v23.11.1    sum_napi             time      747 rate     26744483 rate/core     27033612 ns/iter        37.39 rss     57516032 usr  98.93 sys   0.00 tot  98.93
+node_v23.11.1    sum_napi             time      786 rate     25425918 rate/core     25329364 ns/iter        39.32 rss     57516032 usr 100.38 sys   0.00 tot 100.38
+node_v23.11.1    sum_napi             time      768 rate     26033994 rate/core     26000183 ns/iter        38.41 rss     57516032 usr 100.13 sys   0.00 tot 100.13
+node_v23.11.1    sum_napi             time      758 rate     26366588 rate/core     26297202 ns/iter        37.92 rss     57516032 usr 100.26 sys   0.00 tot 100.26
+node_v23.11.1    sum_napi-rs          time      993 rate     20123430 rate/core     20042937 ns/iter        49.69 rss     57253888 usr 100.40 sys   0.00 tot 100.40
+node_v23.11.1    sum_napi-rs          time     1056 rate     18934340 rate/core     18898615 ns/iter        52.81 rss     57647104 usr 100.19 sys   0.00 tot 100.19
+node_v23.11.1    sum_napi-rs          time      967 rate     20663218 rate/core     20620614 ns/iter        48.39 rss     57647104 usr 100.21 sys   0.00 tot 100.21
+node_v23.11.1    sum_napi-rs          time      968 rate     20659382 rate/core     20638084 ns/iter        48.40 rss     57647104 usr 100.10 sys   0.00 tot 100.10
+node_v23.11.1    sum_napi-rs          time     1005 rate     19896330 rate/core     20015708 ns/iter        50.26 rss     57647104 usr  99.40 sys   0.00 tot  99.40
+node_v23.11.1    sum_napi-rs          time      978 rate     20441837 rate/core     20400119 ns/iter        48.91 rss     57647104 usr 100.20 sys   0.00 tot 100.20
+node_v23.11.1    sum_napi-rs          time      977 rate     20450404 rate/core     20429536 ns/iter        48.89 rss     57647104 usr 100.10 sys   0.00 tot 100.10
+node_v23.11.1    sum_napi-rs          time     1003 rate     19932361 rate/core     19992158 ns/iter        50.16 rss     57778176 usr  99.70 sys   0.00 tot  99.70
+node_v23.11.1    sum_napi-rs          time      983 rate     20334092 rate/core     20210855 ns/iter        49.17 rss     57778176 usr 100.61 sys   0.00 tot 100.61
+node_v23.11.1    sum_napi-rs          time      970 rate     20609989 rate/core     20631236 ns/iter        48.52 rss     57909248 usr  99.90 sys   0.00 tot  99.90
+node_v23.11.1    sum_napi-rs          time     1006 rate     19864927 rate/core     19825591 ns/iter        50.33 rss     57909248 usr 100.20 sys   0.00 tot 100.20
+node_v23.11.1    sum_napi-rs          time      970 rate     20598267 rate/core     20619503 ns/iter        48.54 rss     58040320 usr  99.90 sys   0.00 tot  99.90
+node_v23.11.1    sum_napi-rs          time      968 rate     20657603 rate/core     20615010 ns/iter        48.40 rss     58040320 usr 100.21 sys   0.00 tot 100.21
+node_v23.11.1    sum_napi-rs          time      999 rate     20009970 rate/core     20009970 ns/iter        49.97 rss     58040320 usr 100.00 sys   0.00 tot 100.00
+node_v23.11.1    sum_napi-rs          time      988 rate     20241768 rate/core     20407007 ns/iter        49.40 rss     58040320 usr  99.19 sys   0.00 tot  99.19
+node_v23.11.1    sum_napi-rs          time      967 rate     20675170 rate/core     20632541 ns/iter        48.36 rss     58040320 usr 100.21 sys   0.00 tot 100.21
+node_v23.11.1    sum_napi-rs          time      997 rate     20050236 rate/core     20010135 ns/iter        49.87 rss     58040320 usr 100.20 sys   0.00 tot 100.20
+node_v23.11.1    sum_napi-rs          time      964 rate     20740912 rate/core     20827333 ns/iter        48.21 rss     58040320 usr  99.59 sys   0.00 tot  99.59
+node_v23.11.1    sum_napi-rs          time      989 rate     20205353 rate/core     20205353 ns/iter        49.49 rss     58171392 usr 100.00 sys   0.00 tot 100.00
+node_v23.11.1    sum_napi-rs          time      998 rate     20028429 rate/core     20008401 ns/iter        49.92 rss     58171392 usr 100.10 sys   0.00 tot 100.10
+node_v23.11.1    sum_slow_ffast       time     1559 rate     76936220 rate/core     77034856 ns/iter        12.99 rss     56754176 usr  99.87 sys   0.00 tot  99.87
+node_v23.11.1    sum_slow_ffast       time     1648 rate     72795889 rate/core     72795889 ns/iter        13.73 rss     57016320 usr 100.00 sys   0.00 tot 100.00
+node_v23.11.1    sum_slow_ffast       time     1569 rate     76459071 rate/core     76459071 ns/iter        13.07 rss     57016320 usr 100.00 sys   0.00 tot 100.00
+node_v23.11.1    sum_slow_ffast       time     1536 rate     78102305 rate/core     77950157 ns/iter        12.80 rss     57016320 usr 100.20 sys   0.00 tot 100.20
+node_v23.11.1    sum_slow_ffast       time     1509 rate     79477769 rate/core     79477769 ns/iter        12.58 rss     57016320 usr 100.00 sys   0.00 tot 100.00
+node_v23.11.1    sum_slow_ffast       time     1551 rate     77328708 rate/core     77428487 ns/iter        12.93 rss     57016320 usr  99.87 sys   0.00 tot  99.87
+node_v23.11.1    sum_slow_ffast       time     1509 rate     79475391 rate/core     79475391 ns/iter        12.58 rss     57016320 usr 100.00 sys   0.00 tot 100.00
+node_v23.11.1    sum_slow_ffast       time     1518 rate     79019028 rate/core     78967042 ns/iter        12.65 rss     57147392 usr 100.07 sys   0.00 tot 100.07
+node_v23.11.1    sum_slow_ffast       time     1538 rate     77990869 rate/core     77940226 ns/iter        12.82 rss     57147392 usr 100.06 sys   0.00 tot 100.06
+node_v23.11.1    sum_slow_ffast       time     1505 rate     79728305 rate/core     79517104 ns/iter        12.54 rss     57278464 usr 100.27 sys   0.00 tot 100.27
+node_v23.11.1    sum_slow_ffast       time     1514 rate     79250233 rate/core     79512651 ns/iter        12.61 rss     57278464 usr  99.67 sys   0.00 tot  99.67
+node_v23.11.1    sum_slow_ffast       time     1551 rate     77354424 rate/core     77404330 ns/iter        12.92 rss     57278464 usr  99.94 sys   0.00 tot  99.94
+node_v23.11.1    sum_slow_ffast       time     1510 rate     79441353 rate/core     79493963 ns/iter        12.58 rss     57409536 usr  99.93 sys   0.00 tot  99.93
+node_v23.11.1    sum_slow_ffast       time     1504 rate     79783283 rate/core     79466264 ns/iter        12.53 rss     57409536 usr 100.40 sys   0.00 tot 100.40
+node_v23.11.1    sum_slow_ffast       time     1544 rate     77688477 rate/core     77940712 ns/iter        12.87 rss     57409536 usr  99.68 sys   0.00 tot  99.68
+node_v23.11.1    sum_slow_ffast       time     1544 rate     77690363 rate/core     77439749 ns/iter        12.87 rss     57409536 usr 100.32 sys   0.00 tot 100.32
+node_v23.11.1    sum_slow_ffast       time     1532 rate     78287498 rate/core     78441003 ns/iter        12.77 rss     57409536 usr  99.80 sys   0.00 tot  99.80
+node_v23.11.1    sum_slow_ffast       time     1554 rate     77175511 rate/core     76928153 ns/iter        12.95 rss     57409536 usr 100.32 sys   0.00 tot 100.32
+node_v23.11.1    sum_slow_ffast       time     1513 rate     79271359 rate/core     79481349 ns/iter        12.61 rss     57540608 usr  99.74 sys   0.00 tot  99.74
+node_v23.11.1    sum_slow_ffast       time     1515 rate     79193049 rate/core     79507723 ns/iter        12.62 rss     57540608 usr  99.60 sys   0.00 tot  99.60
+node_v23.11.1    sum_ffast            time      842 rate    142378684 rate/core    141373658 ns/iter         7.02 rss     57802752 usr 100.71 sys   0.00 tot 100.71
+node_v23.11.1    sum_ffast            time      680 rate    176338191 rate/core    173782565 ns/iter         5.67 rss     58851328 usr 101.47 sys   0.00 tot 101.47
+node_v23.11.1    sum_ffast            time      851 rate    140874960 rate/core    141372166 ns/iter         7.09 rss     58851328 usr  99.65 sys   0.00 tot  99.65
+node_v23.11.1    sum_ffast            time      876 rate    136934372 rate/core    137878747 ns/iter         7.30 rss     58851328 usr  99.32 sys   0.00 tot  99.32
+node_v23.11.1    sum_ffast            time      855 rate    140246271 rate/core    139593963 ns/iter         7.13 rss     58851328 usr 100.47 sys   0.00 tot 100.47
+node_v23.11.1    sum_ffast            time      856 rate    140179533 rate/core    139527535 ns/iter         7.13 rss     58851328 usr 100.47 sys   0.00 tot 100.47
+node_v23.11.1    sum_ffast            time      877 rate    136821596 rate/core    138079725 ns/iter         7.30 rss     58851328 usr  99.09 sys   0.00 tot  99.09
+node_v23.11.1    sum_ffast            time      860 rate    139518075 rate/core    139518075 ns/iter         7.16 rss     58851328 usr 100.00 sys   0.00 tot 100.00
+node_v23.11.1    sum_ffast            time      855 rate    140278013 rate/core    139625557 ns/iter         7.12 rss     58851328 usr 100.47 sys   0.00 tot 100.47
+node_v23.11.1    sum_ffast            time      877 rate    136739057 rate/core    136272901 ns/iter         7.31 rss     58982400 usr 100.34 sys   0.00 tot 100.34
+node_v23.11.1    sum_ffast            time      856 rate    140181223 rate/core    141335657 ns/iter         7.13 rss     58982400 usr  99.18 sys   0.00 tot  99.18
+node_v23.11.1    sum_ffast            time      871 rate    137714200 rate/core    137872492 ns/iter         7.26 rss     58982400 usr  99.89 sys   0.00 tot  99.89
+node_v23.11.1    sum_ffast            time      878 rate    136552610 rate/core    136397437 ns/iter         7.32 rss     58982400 usr 100.11 sys   0.00 tot 100.11
+node_v23.11.1    sum_ffast            time      855 rate    140281271 rate/core    139628800 ns/iter         7.12 rss     58982400 usr 100.47 sys   0.00 tot 100.47
+node_v23.11.1    sum_ffast            time      853 rate    140603124 rate/core    141264786 ns/iter         7.11 rss     58982400 usr  99.53 sys   0.00 tot  99.53
+node_v23.11.1    sum_ffast            time      876 rate    136966668 rate/core    136344092 ns/iter         7.30 rss     58982400 usr 100.46 sys   0.00 tot 100.46
+node_v23.11.1    sum_ffast            time      853 rate    140559461 rate/core    141220917 ns/iter         7.11 rss     58982400 usr  99.53 sys   0.00 tot  99.53
+node_v23.11.1    sum_ffast            time      852 rate    140839415 rate/core    139529281 ns/iter         7.10 rss     59113472 usr 100.94 sys   0.00 tot 100.94
+node_v23.11.1    sum_ffast            time      876 rate    136852796 rate/core    137953910 ns/iter         7.30 rss     59113472 usr  99.20 sys   0.00 tot  99.20
+node_v23.11.1    sum_ffast            time      855 rate    140201845 rate/core    139712769 ns/iter         7.13 rss     59113472 usr 100.35 sys   0.00 tot 100.35
+```

@@ -7,7 +7,7 @@ const { sum, sum_slow } = binding
 
 const bench = new Bench()
 const runs = 120000000
-const iter = 5
+const iter = 20
 
 for (let i = 0; i < iter; i++) {
 
@@ -15,8 +15,10 @@ for (let i = 0; i < iter; i++) {
   for (let j = 0; j < runs; j++) assert(sum_slow(10, 20) === 30)
   bench.end(runs)
 
+}
+
+for (let i = 0; i < iter; i++) {
   bench.start('sum_ffast')
   for (let j = 0; j < runs; j++) assert(sum(10, 20) === 30)
   bench.end(runs)
-
 }

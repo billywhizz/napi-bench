@@ -12,5 +12,11 @@ a benchmark comparing napi, napi-rs and ffast bindings overhead
 ## build
 
 ```shell
-make clean bench
+make clean libs bench
+```
+
+## run
+
+```shell
+make bench
 ```
