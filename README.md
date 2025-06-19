@@ -1,3 +1,5 @@
+a benchmark comparing napi, napi-rs and ffast bindings overhead
+
 ## requirements
 
 - Linux 6+, macos/darwin x64/arm64 12+
@@ -9,4 +11,6 @@
 
 ## build
 
-- `make libs`
+```shell
+make clean bench
+```
