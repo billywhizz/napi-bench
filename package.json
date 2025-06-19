@@ -10,6 +10,9 @@
     "@napi-rs/cli": "^2",
     "node-gyp": "^11"
   },
+  "scripts": {
+    "bench": "node test-napi.js && node test-napi-rs.js && node test-ffast.js"
+  },
   "engines": {
     "node": ">= 22"
   }

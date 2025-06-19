@@ -5,3 +5,4 @@ index.js
 bench.sh
 index.d.ts
 build
+src/v8-fast-api-calls.h
