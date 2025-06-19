@@ -1,0 +1,7 @@
+node_modules
+target
+*.node
+index.js
+bench.sh
+index.d.ts
+build

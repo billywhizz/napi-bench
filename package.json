@@ -1,0 +1,16 @@
+{
+  "name": "napi-bench",
+  "version": "0.0.1",
+  "type": "module",
+  "napi": {
+    "name": "napi-rs-sum"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@napi-rs/cli": "^2",
+    "node-gyp": "^11"
+  },
+  "engines": {
+    "node": ">= 22"
+  }
+}
