@@ -16,3 +16,9 @@ napi-build = "2.0.1"
 [profile.release]
 lto = true
 strip = "symbols"
+
+[target.x86_64-apple-darwin]
+rustflags = ["-C", "link-args=-Wl,-undefined,dynamic_lookup"]
+
+[target.aarch64-apple-darwin]
+rustflags = ["-C", "link-args=-Wl,-undefined,dynamic_lookup"]
