@@ -3,7 +3,8 @@ import { createRequire } from "node:module"
 
 const load = createRequire(import.meta.url)
 
-const { sum } = load('./napi-rs-sum.linux-x64-gnu.node');
+const { arch, platform } = process
+const { sum } = load(`./napi-rs-sum.${platform}-${arch === 'linux' ? 'linux-gnu' : arch}.node`);
 
 const bench = new Bench()
 const runs = 20000000
