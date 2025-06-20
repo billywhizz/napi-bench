@@ -8,7 +8,8 @@ help:
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z0-9\/_\.-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 bench: sum.node napi-sum.node ## run the benchmarks
-	npm run bench
+	npm run bench | tee bench.log
+	node chart.js
 
 src/v8-fast-api-calls.h: ## download the v8 fast api headers for current node/v8 version
 	echo "downloading src.v8-fast-api-calls.h"
@@ -29,3 +30,4 @@ clean: ## clean all the build artifacts except node_modules
 	rm -fr node_modules
 	rm -f index.d.ts
 	rm -f *.node
+	rm -f *.log

@@ -6,6 +6,7 @@ a benchmark comparing napi, napi-rs and ffast bindings overhead
 - node.js LTS+
 - a C++ compiler capable of compiling node addons
 - make
+- curl
 - Rust + Cargo
 - npm
 
