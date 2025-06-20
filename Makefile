@@ -9,7 +9,7 @@ help:
 
 bench: sum.node napi-sum.node ## run the benchmarks
 	npm run bench | tee bench.log
-	node chart.js
+	npm run chart
 
 src/v8-fast-api-calls.h: ## download the v8 fast api headers for current node/v8 version
 	echo "downloading src.v8-fast-api-calls.h"

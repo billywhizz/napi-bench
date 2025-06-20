@@ -11,7 +11,8 @@
     "node-gyp": "^11"
   },
   "scripts": {
-    "bench": "node test-napi.js && node test-napi-rs.js && node test-ffast.js"
+    "bench": "node test-napi.js && node test-napi-rs.js && node test-ffast.js",
+    "chart": "node chart.js"
   },
   "engines": {
     "node": ">= 22"
