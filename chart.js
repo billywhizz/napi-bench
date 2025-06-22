@@ -56,8 +56,8 @@ function showChart (name, direction = Directions.Ascending) {
   for (const result of results) {
     const [name, value] = result
     const blocks = Math.ceil((value / max) * 50)
-    const pc = ((value / best))
-    const dot = get_dot(pc, direction)
+    const pc = direction === Directions.Descending ? ((best / value)) : ((value / best))
+    const dot = get_dot(value / best, direction)
     const display_val = value.toFixed(value >= 1000 ? 0 : 2)
     console.log(`${AM}${name.slice(0, 32).padEnd(32, ' ')}${AD} | ${AD}${display_val.padStart(16, ' ')}${AD} | ${AG}${pc.toFixed(2).padStart(8, ' ')}${AD} | ${(new Array(blocks)).fill(dot).join('')}`)
   }
